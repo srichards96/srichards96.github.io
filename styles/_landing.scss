@@ -1,13 +1,12 @@
 .landing {
   height: 100%;
-  display: grid;
-  grid-template-rows: 4rem auto;
 
   .landing-header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0 1rem;
+    height: $header-height;
   }
 
   .landing-body {
@@ -15,7 +14,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    // Pad sides a little and the bottom a little more.
+    // 100% - header height - padding bottom.
+    height: calc(100% - #{$header-height} - 3rem);
     margin: 0 2rem 3rem 2rem;
   }
 }
@@ -23,7 +23,27 @@
 .landing-header {
   // todo mobile nav links...
   .nav-links {
-    display: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: $sidebar-width;
+    height: 100%;
+    top: 0;
+    left: -$sidebar-width;
+    transition: left 0.2s ease-in-out;
+
+    &.visible {
+      left: 0;
+    }
+
+    a {
+      text-align: center;
+      padding: 2rem 0;
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
   }
 }
 
