@@ -26,3 +26,9 @@ body.wide-bg {
     color: $primary-color;
   }
 }
+
+.desktop-no-margin {
+  @include desktop-sm {
+    margin: 0 !important;
+  }
+}

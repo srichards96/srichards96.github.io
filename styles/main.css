@@ -13,8 +13,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
+  margin: 0 1rem;
   height: 4rem;
+}
+
+@media screen and (min-width: 700px) {
+  .landing .landing-header {
+    margin: 0 6rem;
+    height: 8rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .landing .landing-header {
+    margin: 0 12rem;
+  }
 }
 
 .landing .landing-body {
@@ -32,6 +45,31 @@
       justify-content: space-around;
   height: calc(100% - 4rem - 3rem);
   margin: 0 2rem 3rem 2rem;
+}
+
+@media screen and (min-width: 700px) {
+  .landing .landing-body {
+    height: calc(100% - 8rem - 3rem);
+    margin: 0 6rem 3rem 6rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .landing .landing-body {
+    margin: 0 12rem 3rem 12rem;
+  }
+}
+
+@media screen and (min-width: 1400px) and (min-height: 1000px) {
+  .landing .landing-body {
+    height: calc(80% -  8rem - 3rem);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .landing-header .nav-toggle {
+    display: none;
+  }
 }
 
 .landing-header .nav-links {
@@ -64,9 +102,46 @@
   font-size: 24px;
 }
 
+.landing-header .nav-links a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 700px) {
+  .landing-header .nav-links {
+    position: initial;
+    width: auto;
+    background: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .landing-header .nav-links a {
+    padding: initial;
+  }
+  .landing-header .nav-links a:not(:last-child) {
+    margin-right: 6rem;
+  }
+}
+
 .landing-body .landing-headline {
   margin: 0.5rem 0 0 0;
   font-size: 24px;
+}
+
+@media screen and (min-width: 700px) {
+  .landing-body .landing-headline {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .landing-body .landing-headline {
+    font-size: 48px;
+  }
 }
 
 .landing-body .landing-subheadline {
@@ -81,6 +156,20 @@
 
 .landing-body .landing-subheadline p:not(:first-child) {
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+  .landing-body .landing-subheadline {
+    font-size: 18px;
+    max-width: 40rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .landing-body .landing-subheadline {
+    font-size: 24px;
+    max-width: 60rem;
+  }
 }
 
 .landing-body .landing-call-to-action {
@@ -104,6 +193,13 @@
   background-color: #9223ff;
 }
 
+@media screen and (min-width: 700px) {
+  .landing-body .landing-call-to-action {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -125,5 +221,11 @@ body.wide-bg {
 
 .flavor-text.primary {
   color: #AB56FF;
+}
+
+@media screen and (min-width: 700px) {
+  .desktop-no-margin {
+    margin: 0 !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
