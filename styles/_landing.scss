@@ -32,7 +32,7 @@
     }
     @include desktop-lg {
       margin: 0 $desktop-lg-side-margin 3rem $desktop-lg-side-margin;
-      
+
       // Reduce height of flexbox, but only if window height can support it.
       @media screen and (min-height: 1000px) {
         height: calc(80% -  #{$desktop-header-height} - 3rem);
@@ -143,6 +143,7 @@
 
     @include desktop-sm {
       align-self: flex-start;
+      min-width: 10rem;
     }
   }
 }

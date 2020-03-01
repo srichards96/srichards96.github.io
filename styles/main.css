@@ -197,6 +197,7 @@
   .landing-body .landing-call-to-action {
     -ms-flex-item-align: start;
         align-self: flex-start;
+    min-width: 10rem;
   }
 }
 
