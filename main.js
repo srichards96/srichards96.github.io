@@ -24,10 +24,8 @@
 
     if (ratio > breakpoint) {
       document.body.classList.add('wide-bg');
-      console.log('too wide');
     } else {
       document.body.classList.remove('wide-bg');
-      console.log('not too wide');
     }
   };
   checkWindowAspectRatio(window.innerWidth, window.innerHeight);
