@@ -1,0 +1,70 @@
+.landing {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 4rem auto;
+
+  .landing-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .landing-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    // Pad sides a little and the bottom a little more.
+    margin: 0 2rem 3rem 2rem;
+  }
+}
+
+.landing-header {
+  // todo mobile nav links...
+  .nav-links {
+    display: none;
+  }
+}
+
+
+.landing-body {
+  .landing-headline {
+    // Small margin at top.
+    margin: 0.5rem 0 0 0;
+    font-size: 24px;
+  }
+
+  .landing-subheadline {
+    line-height: 150%;
+    font-size: 14px;
+    font-weight: 500;
+
+    // No margin to maximize space-between other elements of flex.
+    p {
+      margin: 0;
+      // Add margin-top to all but the first <p> to separate paragraphs.
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .landing-call-to-action {
+    padding: 1.25rem;
+    min-width: 35%;
+    color: white;
+    background-color: $primary-color;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    align-self: center;
+
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: darken($primary-color, 10);
+    }
+  }
+}
