@@ -112,11 +112,15 @@ html, body {
   height: 100vh;
   font-family: 'montserrat', sans-serif;
   color: white;
-  background: url("/assets/images/background-desktop.jpg");
+  background: url("/assets/images/background.jpg");
   background-color: black;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
+}
+
+body.wide-bg {
+  background-size: 100% auto;
 }
 
 .flavor-text.primary {

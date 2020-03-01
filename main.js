@@ -17,4 +17,25 @@
     }
   })();
   
+  // Checks inner window aspect ratio. If greater than 16:9, bg image is made 100% wide.
+  function checkWindowAspectRatio(width, height) {
+    var breakpoint = 16 / 9;
+    var ratio = width / height;
+
+    if (ratio > breakpoint) {
+      document.body.classList.add('wide-bg');
+      console.log('too wide');
+    } else {
+      document.body.classList.remove('wide-bg');
+      console.log('not too wide');
+    }
+  };
+  checkWindowAspectRatio(window.innerWidth, window.innerHeight);
+  
+  // On window resize, check aspect ratio of inner window...
+  window.onresize = function (e) {
+    var width = e.target.innerWidth;
+    var height = e.target.innerHeight;
+    checkWindowAspectRatio(width, height);
+  }
 })();

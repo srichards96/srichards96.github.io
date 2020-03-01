@@ -16,7 +16,7 @@
     justify-content: space-around;
     // 100% - header height - padding bottom.
     height: calc(100% - #{$header-height} - 3rem);
-    margin: 0 2rem 3rem 2rem;
+    margin: 0 $mobile-side-margin 3rem $mobile-side-margin;
   }
 }
 
