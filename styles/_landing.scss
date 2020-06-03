@@ -1,149 +1,71 @@
-.landing {
-  height: 100%;
-
-  .landing-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0 1rem;
-    height: $mobile-header-height;
-
-    // Make header taller on desktop.
-    @include desktop-sm {
-      margin: 0 $desktop-sm-side-margin;
-      height: $desktop-header-height;
-    }
-    @include desktop-lg { margin: 0 $desktop-lg-side-margin; }
-  }
-
-  .landing-body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    // 100% - header height - padding bottom.
-    height: calc(100% - #{$mobile-header-height} - 3rem);
-    margin: 0 $mobile-side-margin 3rem $mobile-side-margin;
-
-    // On desktop, have more margin
-    @include desktop-sm {
-      height: calc(100% - #{$desktop-header-height} - 3rem);
-      margin: 0 $desktop-sm-side-margin 3rem $desktop-sm-side-margin;
-    }
-    @include desktop-lg {
-      margin: 0 $desktop-lg-side-margin 3rem $desktop-lg-side-margin;
-
-      // Reduce height of flexbox, but only if window height can support it.
-      @media screen and (min-height: 1000px) {
-        height: calc(80% -  #{$desktop-header-height} - 3rem);
-      }
-    }
-  }
-}
-
 .landing-header {
-  // Don't show on desktop.
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
   .nav-toggle {
+    padding: 0.6rem 1rem;
+
+    // Hide on desktop.
     @include desktop-sm {
       display: none;
     }
   }
+}
 
-  .nav-links {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: $sidebar-width;
-    height: 100%;
-    top: 0;
-    left: -$sidebar-width;
-    transition: left 0.2s ease-in-out;
+.nav-links {
+  $sidebar-width: 80%;
+  position: absolute;
+  top: 0;
+  left: -$sidebar-width;
+  width: $sidebar-width;
+  height: 100vh;
+  background: rgba(#000, 0.8);
 
-    &.visible {
-      left: 0;
+  transition: left 0.2s;
+
+  &.visible {
+    left: 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  a {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    padding: 2rem 0;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
+  }
+
+
+  @include desktop-sm {
+    position: unset;
+    height: auto;
+    width: 100%;
+
+    flex-direction: row;
+    justify-content: flex-end;
 
     a {
-      text-align: center;
-      padding: 2rem 0;
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    @include desktop-sm {
-      position: initial;
       width: auto;
-      background: none;
-      flex-direction: row;
-      align-items: center;
-
-      a {
-        padding: initial;
-        
-        &:not(:last-child) {
-          margin-right: 6rem;
-        }
-      }
+      padding: 1.5rem;
     }
   }
 }
 
-
-.landing-body {
-  .landing-headline {
-    // Small margin at top.
-    margin: 0.5rem 0 0 0;
-    font-size: 24px;
-
-    // Make text larger on desktop.
-    @include desktop-sm { font-size: 36px; }
-    @include desktop-lg { font-size: 48px; }
-  }
-
-  .landing-subheadline {
-    line-height: 150%;
-    font-size: 14px;
-    font-weight: 500;
-
-    // No margin to maximize space-between other elements of flex.
-    p {
-      margin: 0;
-      // Add margin-top to all but the first <p> to separate paragraphs.
-      &:not(:first-child) {
-        margin-top: 1rem;
-      }
-    }
-
-    @include desktop-sm { font-size: 18px; max-width: 40rem; }
-    @include desktop-lg { font-size: 24px; max-width: 60rem; }
-  }
-
-  .landing-call-to-action {
-    padding: 1.25rem;
-    min-width: 35%;
-    color: white;
-    background-color: $primary-color;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 8px;
-    align-self: center;
-
-    transition: background-color 0.2s ease;
-    &:hover {
-      background-color: darken($primary-color, 10);
-    }
-
-    @include desktop-sm {
-      align-self: flex-start;
-      min-width: 10rem;
-    }
-  }
+.landing {
+  height: 100vh;
 }
