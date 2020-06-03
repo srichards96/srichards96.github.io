@@ -14,12 +14,25 @@
 
 .landing-header .nav-toggle {
   padding: 0.6rem 1rem;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
 @media screen and (min-width: 768px) {
   .landing-header .nav-toggle {
     display: none;
   }
+}
+
+.landing-header .nav-toggle:hover {
+  cursor: pointer;
+}
+
+.landing-header .nav-toggle.menu-open {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .nav-links {

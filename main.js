@@ -6,12 +6,14 @@
   // When toggle is clicked, toggle the sidenav.
   sidenavToggle.addEventListener('click', function () {
     sidenav.classList.toggle('visible');
+    sidenavToggle.classList.toggle('menu-open');
   });
   // When a sidenav link is clicked, close the sidenav if open.
   (function () { // Contain i
     for (var i = 0; i < sidenavLinks.length; i++) {
       sidenavLinks[i].addEventListener('click', function () {
         sidenav.classList.remove('visible');
+        sidenavToggle.classList.remove('menu-open');
       });
     }
   })();

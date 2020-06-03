@@ -9,10 +9,19 @@
 
   .nav-toggle {
     padding: 0.6rem 1rem;
+    transition: transform 0.2s;
 
     // Hide on desktop.
     @include desktop-sm {
       display: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.menu-open  {
+      transform: scale(1.2);
     }
   }
 }
