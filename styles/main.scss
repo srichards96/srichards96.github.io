@@ -1,5 +1,6 @@
 @import '_variables';
 @import '_landing';
+@import '_section';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
 
@@ -10,6 +11,7 @@ html, body {
   min-height: 100vh;
   font-family: 'montserrat', sans-serif;
   color: white;
+  scroll-behavior: smooth;
   background: url('/assets/images/background.jpg');
   background-color: black;
   background-repeat: no-repeat;

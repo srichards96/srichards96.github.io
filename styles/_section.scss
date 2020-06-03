@@ -1,0 +1,34 @@
+.section {
+  min-height: 100vh;
+  margin: 8rem 0;
+  background: rgba(#000, 0.9);
+
+  padding: 1rem;
+  
+  &.no-margin-bottom {
+    margin-bottom: 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include desktop-sm {
+    padding: 2rem;
+  }
+}
+
+.section-inner {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-wording {
+    @include desktop-sm {
+      font-size: 18px;
+    }
+    @include desktop-lg {
+      font-size: 20px;
+    }
+  }
+}
