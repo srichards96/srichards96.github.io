@@ -256,6 +256,9 @@ html, body {
   font-family: 'montserrat', sans-serif;
   color: white;
   scroll-behavior: smooth;
+}
+
+body {
   background: url("/assets/images/background.jpg");
   background-color: black;
   background-repeat: no-repeat;
