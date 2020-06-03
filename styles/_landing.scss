@@ -62,24 +62,27 @@
       color: $primary-color;
       font-weight: bold;
       font-size: 28px;
-      margin-right: auto;
       margin-bottom: 2rem;
 
       @include desktop-sm {
         margin-bottom: 0;
       }
     }
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
   }
 
 
   @include desktop-sm {
-    position: unset;
+    position: static;
     height: auto;
     width: 100%;
     padding: 0 5%;
 
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     a {
       width: auto;

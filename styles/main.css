@@ -77,7 +77,6 @@
   color: #AB56FF;
   font-weight: bold;
   font-size: 28px;
-  margin-right: auto;
   margin-bottom: 2rem;
 }
 
@@ -87,9 +86,13 @@
   }
 }
 
+.nav-links a:nth-child(2) {
+  margin-left: auto;
+}
+
 @media screen and (min-width: 768px) {
   .nav-links {
-    position: unset;
+    position: static;
     height: auto;
     width: 100%;
     padding: 0 5%;
@@ -97,9 +100,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .nav-links a {
     width: auto;
