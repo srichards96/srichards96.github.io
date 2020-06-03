@@ -16,7 +16,7 @@
   padding: 0.6rem 1rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
   .landing-header .nav-toggle {
     display: none;
   }
@@ -60,7 +60,7 @@
   text-decoration: underline;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
   .nav-links {
     position: unset;
     height: auto;
@@ -81,6 +81,96 @@
 
 .landing {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.landing .landing-body {
+  min-height: 50vh;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.landing .landing-body .landing-headline {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .landing .landing-body .landing-headline {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing .landing-body .landing-headline {
+    font-size: 40px;
+  }
+}
+
+.landing .landing-body .landing-subheadline {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .landing .landing-body .landing-subheadline {
+    font-size: 20px;
+    max-width: 30rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing .landing-body .landing-subheadline {
+    font-size: 24px;
+    max-width: 50rem;
+  }
+}
+
+.landing .landing-body .landing-call-to-action {
+  width: 10rem;
+  max-width: 100%;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: white;
+  text-decoration: none;
+  border-radius: 2px;
+  background: #AB56FF;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  font-size: 20px;
+}
+
+.landing .landing-body .landing-call-to-action:hover {
+  background-color: #9223ff;
+}
+
+@media screen and (min-width: 768px) {
+  .landing .landing-body .landing-call-to-action {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing .landing-body .landing-call-to-action {
+    width: 15rem;
+    font-size: 28px;
+  }
 }
 
 html, body {
@@ -88,7 +178,7 @@ html, body {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'montserrat', sans-serif;
   color: white;
   background: url("/assets/images/background.jpg");
@@ -107,7 +197,7 @@ body.wide-bg {
   color: #AB56FF;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
   .desktop-no-margin {
     margin: 0 !important;
   }

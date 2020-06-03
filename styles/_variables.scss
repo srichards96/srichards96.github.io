@@ -11,13 +11,13 @@ $desktop-lg-side-margin: 12rem;
 
 // Breakpoint for desktop layout.
 @mixin desktop-sm {
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin desktop-lg {
-  @media screen and (min-width: 1400px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }
