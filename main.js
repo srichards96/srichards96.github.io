@@ -1,4 +1,3 @@
-// Use ES5 for compatability. I'm not gonna set up Babel for something this small...
 (function () {
   var sidenav = document.querySelector('.nav-links');
   var sidenavToggle = document.querySelector('.landing-header img');
