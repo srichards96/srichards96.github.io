@@ -1,0 +1,94 @@
+.contact-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: block;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  border: solid rgba(#fff, 0.2) 1px;
+  border-radius: 8px;
+  background: rgba(#fff, 0.1);
+  text-decoration: none;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  @include desktop-sm {
+    width: 300px;
+  }
+
+  &:hover,
+  &:focus {
+    .contact-item-img {
+      background-color: rgba(#fff, 0.8);
+      background-size: 100px 100px;
+    }
+
+    .contact-item-title {
+      transform: scale(1.2);
+    }
+    .contact-item-text {
+      color: skyblue;
+      text-decoration: underline;
+    }
+  }
+
+  .contact-item-img {
+    height: 150px;
+    width: 150px;
+    border: solid white 1px;
+    border-radius: 50%;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px 80px;
+
+    transition: background-color, background, 0.2s;
+  }
+
+  .contact-item-title {
+    color: $primary-color;
+
+    transition: transform 0.2s;
+  }
+  
+  .contact-item-text {
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+
+  // Individual contact-item images...
+  &.email {
+    .contact-item-img         { background-image: url('/assets/images/contact-logos/email-white-48dp.svg'); }
+    &:hover .contact-item-img,
+    &:focus .contact-item-img { background-image: url('/assets/images/contact-logos/email-black-48dp.svg'); }
+  }
+  &.linkedin {
+    // This needs additional adjustment due to the copyright in bottom right corner...
+    .contact-item-img {
+      background-image: url('/assets/images/contact-logos/LI-White.png');
+      background-size: 70px 60px;
+      background-position-x: calc(50% + 6px);
+    }
+    &:hover .contact-item-img,
+    &:focus .contact-item-img {
+      background-image: url('/assets/images/contact-logos/LI-Black.png');
+      background-size: 84px 72px;
+    }
+  }
+  &.github {
+    .contact-item-img         { background-image: url('/assets/images/contact-logos/GitHub-Mark-Light-120px-plus.png'); }
+    &:hover .contact-item-img,
+    &:focus .contact-item-img { background-image: url('/assets/images/contact-logos/GitHub-Mark-120px-plus.png'); }
+  }
+}
